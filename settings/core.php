@@ -22,7 +22,7 @@ function check_login(){
 //funtion to check for login
 function check_admin_login(){
 	//check if login session exit
-	if (!isset($_SESSION['user_id']) && $_SESSION['role'] == 1) 
+	if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) == 1) 
 	{
 		//redirect to login page
 		// $_SESSION['role'] = 0;

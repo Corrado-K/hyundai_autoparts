@@ -2,8 +2,11 @@
 include '../settings/core.php';
 include '../controller/orderController.php';
 
-$orders = view_order_controller($_SESSION['user_id']);
-$payments = view_payment_controller($_SESSION['user_id']);
+if (isset($_SESSION['user_id'])) {
+    $orders = view_order_controller($_SESSION['user_id']);
+    $payments = view_payment_controller($_SESSION['user_id']);
+}
+
 
 check_admin_login();
 
